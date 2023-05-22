@@ -1,0 +1,193 @@
+{
+    "roupas": [
+        {
+           "id": 1,
+           "titulo": "Camisa braba",
+           "preco": 100,
+           "genero": "masculino",
+           "descricao": "camisa muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "camisa",
+           "vendidos" : 10
+        },
+        {
+           "id": 2,
+           "titulo": "Camisa braba",
+           "preco": 100,
+           "genero": "masculino",
+           "descricao": "camisa muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "camisa",
+           "vendidos" : 15
+        },
+        {
+           "id": 3,
+           "titulo": "Camisa braba",
+           "preco": 100,
+           "genero": "masculino",
+           "descricao": "camisa muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "camisa",
+           "vendidos" : 18
+        },
+        {
+           "id": 4,
+           "titulo": "Camiseta braba",
+           "preco": 80,
+           "genero": "masculino",
+           "descricao": "camiseta muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "camiseta",
+           "vendidos" : 25
+        },
+        {
+           "id": 5,
+           "titulo": "Camiseta braba",
+           "preco": 80,
+           "genero": "masculino",
+           "descricao": "camiseta muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "camiseta",
+           "vendidos" : 10
+        },
+        {
+           "id": 6,
+           "titulo": "Camiseta braba",
+           "preco": 80,
+           "genero": "masculino",
+           "descricao": "camiseta muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "camiseta",
+           "vendidos" : 8
+        },
+        {
+           "id": 7,
+           "titulo": "Shorts brabo",
+           "preco": 90,
+           "genero": "masculino",
+           "descricao": "shorts muito bom, de ótima qualidade, e um preço acessível.",
+           "categoria": "shorts",
+           "vendidos" : 6
+        },
+        {
+           "id": 8,
+           "titulo": "Shorts brabo",
+           "preco": 90,
+           "genero": "masculino",
+           "descricao": "shorts muito bom, de ótima qualidade, e um preço acessível.",
+           "categoria": "shorts",
+           "vendidos" : 17
+        },
+        {
+           "id": 9,
+           "titulo": "Shorts brabo",
+           "preco": 90,
+           "genero": "masculino",
+           "descricao": "shorts muito bom, de ótima qualidade, e um preço acessível.",
+           "categoria": "shorts",
+           "vendidos" : 21
+        },
+        {
+           "id": 10,
+           "titulo": "Camisa braba",
+           "preco": 100,
+           "genero": "feminino",
+           "descricao": "camiseta muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "camiseta",
+           "vendidos" : 28
+        },
+        {
+           "id": 11,
+           "titulo": "Camisa braba",
+           "preco": 100,
+           "genero": "feminino",
+           "descricao": "camiseta muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "camiseta",
+           "vendidos" : 11
+        },
+        {
+           "id": 12,
+           "titulo": "Camisa braba",
+           "preco": 100,
+           "genero": "feminino",
+           "descricao": "camiseta muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "camiseta",
+           "vendidos" : 13
+        },
+        {
+           "id": 13,
+           "titulo": "Blusa braba",
+           "preco": 70,
+           "genero": "feminino",
+           "descricao": "blusa muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "blusa",
+           "vendidos" : 9
+        },
+        {
+           "id": 14,
+           "titulo": "Blusa braba",
+           "preco": 70,
+           "genero": "feminino",
+           "descricao": "blusa muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "blusa",
+           "vendidos" : 8
+        },
+        {
+           "id": 15,
+           "titulo": "Blusa braba",
+           "preco": 70,
+           "genero": "feminino",
+           "descricao": "blusa muito boa, de ótima qualidade, e um preço acessível.",
+           "categoria": "blusa",
+           "vendidos" : 14
+        },
+        {
+           "id": 16,
+           "titulo": "Shorts braba",
+           "preco": 80,
+           "genero": "feminino",
+           "descricao": "shorts muito bom, de ótima qualidade, e um preço acessível.",
+           "categoria": "shorts",
+           "vendidos" : 15
+        },
+        {
+           "id": 17,
+           "titulo": "Shorts braba",
+           "preco": 80,
+           "genero": "feminino",
+           "descricao": "shorts muito bom, de ótima qualidade, e um preço acessível.",
+           "categoria": "shorts",
+           "vendidos" : 18
+        },
+        {
+           "id": 18,
+           "titulo": "Shorts braba",
+           "preco": 80,
+           "genero": "feminino",
+           "descricao": "shorts muito bom, de ótima qualidade, e um preço acessível.",
+           "categoria": "shorts",
+           "vendidos" : 17
+        },
+        {
+           "id": 19,
+           "titulo": "Camisa",
+           "preco": 50,
+           "genero": "Infantil",
+           "descricao": "camiseta muito bom, de ótima qualidade, e um preço acessível.",
+           "categoria": "camiseta",
+           "vendidos" : 10
+        },
+        {
+           "id": 20,
+           "titulo": "Camisa",
+           "preco": 50,
+           "genero": "Infantil",
+           "descricao": "camiseta muito bom, de ótima qualidade, e um preço acessível.",
+           "categoria": "camiseta",
+           "vendidos" : 16
+        },
+        {
+           "id": 21,
+           "titulo": "Camisa",
+           "preco": 50,
+           "genero": "Infantil",
+           "descricao": "camiseta muito bom, de ótima qualidade, e um preço acessível.",
+           "categoria": "camiseta",
+           "vendidos" : 12
+        }
+    ]
+}
