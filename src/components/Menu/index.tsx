@@ -1,12 +1,13 @@
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import { MdOutlineFavoriteBorder } from 'react-icons/md'
 import { BsCart2 } from 'react-icons/bs'
 import { styled } from 'styled-components'
 import { AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai'
 import ModalMenu from './ModalMenu'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Badge } from '@mui/material'
 import { Item } from '../../utilidade/Item'
+import { ListaDeDesejosContext } from '../../context/ListaDeDesejos'
 
 const MenuContainer = styled.header`
   position: relative;
@@ -19,7 +20,7 @@ const Section1 = styled.section`
   justify-content: space-around;
   align-items: center;
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.8rem 0;
   a{
     text-decoration: none;
     color: #fff;
@@ -27,11 +28,12 @@ const Section1 = styled.section`
   .input{
     margin-top: 0.1rem;
     position: absolute;
-    top: 100%;
+    top: 109%;
     z-index: 15;
     input{
       min-width: 300px;
       padding: 0.5rem 0;
+      outline: none;
     }
     .search{
       position: absolute;
@@ -66,8 +68,13 @@ const Section1 = styled.section`
       color: #000;
       z-index: 5;
       right: 0;
-      margin-right: 0.5rem;
       font-size: 20px;
+      padding: 0.5rem;
+      margin-right: 0;
+    }
+    .search:hover{
+      cursor: pointer;
+      background-color: gray;
     }
   }
   div{
@@ -137,18 +144,27 @@ interface Props {
 export default function Menu({setGeneroEProduto, carrinho}: Props) {
   const [modalOpen, setModalOpen] = useState(false);
 
+  const listaDeDesejos = useContext(ListaDeDesejosContext)
+
+  const navigate = useNavigate()
+
   return (
     <MenuContainer>
       <Section1>
         <Link to='/'>
-          <span>LOGO</span>
+          <span>L O G G U</span>
         </Link>
         <div className='input'>
-          <input type="text" placeholder='O que voce procura hoje?'/>< AiOutlineSearch className='search'/>
+          <input type="text" placeholder='O que voce procura hoje?'/>< AiOutlineSearch className='search' onClick={() => navigate('produtos')}/>
         </div>
           <Link to='lista-de-desejos'>
             <div>
-              <MdOutlineFavoriteBorder size={25}/>
+              <Badge
+                badgeContent={listaDeDesejos.length}
+                color="primary"
+              >
+                <MdOutlineFavoriteBorder size={25}/>
+              </Badge>
                 <span>Lista de Desejos</span>
             </div>
           </Link>
@@ -169,9 +185,9 @@ export default function Menu({setGeneroEProduto, carrinho}: Props) {
         </div>
         <ModalMenu modalOpen={modalOpen} setModalOpen={setModalOpen} setGeneroEProduto={setGeneroEProduto}/>
         <ul>
-          <li>Masculino</li>
-          <li>Feminino</li>
-          <li>Infantil</li>
+          <li onClick={() => navigate('produtos')}>Masculino</li>
+          <li onClick={() => navigate('produtos')}>Feminino</li>
+          <li onClick={() => navigate('produtos')}>Infantil</li>
         </ul>
       </Section2>
     </MenuContainer>

@@ -33,6 +33,9 @@ const ConteudoCategoriaContainer = styled.section`
                     width: 150px;
                     height: 150px;
                 }
+                button:hover{
+                    cursor: pointer;
+                }
             }
         }
     }

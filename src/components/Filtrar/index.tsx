@@ -62,6 +62,9 @@ const Filtro = styled.section<Props>`
         button{
             margin-top: 1rem;
         }
+        button:hover{
+            cursor: pointer;
+        }
         section{
             display: flex;
         }
