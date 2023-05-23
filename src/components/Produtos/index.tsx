@@ -2,6 +2,7 @@ import { styled } from "styled-components"
 import itens from '../../json/itens.json'
 import Filtrar from "../Filtrar"
 import { useState } from 'react'
+import { useNavigate } from "react-router-dom"
 
 const ConteudoCategoriaContainer = styled.section`
     margin-top: 8rem;
@@ -46,6 +47,7 @@ interface Props {
 }
 
 export default function Produtos({ generoEProduto, setGeneroEProduto }: Props){
+    const navigate = useNavigate()
 
     // const { genero, produto } = generoEProduto
 
@@ -80,7 +82,7 @@ export default function Produtos({ generoEProduto, setGeneroEProduto }: Props){
                 {generoECategoriaClicado.map((item, index) => (
                     <li key={index}>
                         <img src={`/imagens/imagem${item.id}.png`} width={100} height={100} alt={item.titulo}/>
-                        <button>Mais detalhes</button>
+                        <button onClick={() => navigate(`/produto/${item.id}`)}>Mais detalhes</button>
                     </li>
                 ))}
             </ul>

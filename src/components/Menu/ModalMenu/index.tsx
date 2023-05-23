@@ -9,8 +9,8 @@ const ModalContainer = styled.section<{display: string}>`
     top: 50%;
     display: ${props => props.display};
     @media screen and (min-width: 1024px){
-        width: 70%;
-        height: auto;
+        width: 80%;
+        height: 60vh;
         background-color: gray;
         display: ${props => props.display};
         position: absolute;
@@ -154,7 +154,7 @@ export default function ModalMenu({modalOpen, setModalOpen, setGeneroEProduto}: 
     
         const Feminino = [
             {
-                item: 'Camisa'
+                item: 'Camiseta'
             },
             {
                 item: 'Blusa'

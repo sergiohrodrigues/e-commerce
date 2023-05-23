@@ -168,7 +168,7 @@
            "preco": 50,
            "genero": "Infantil",
            "descricao": "camiseta muito bom, de ótima qualidade, e um preço acessível.",
-           "categoria": "camiseta",
+           "categoria": "Camisa",
            "vendidos" : 10
         },
         {
@@ -177,7 +177,7 @@
            "preco": 50,
            "genero": "Infantil",
            "descricao": "camiseta muito bom, de ótima qualidade, e um preço acessível.",
-           "categoria": "camiseta",
+           "categoria": "Camisa",
            "vendidos" : 16
         },
         {
@@ -186,7 +186,7 @@
            "preco": 50,
            "genero": "Infantil",
            "descricao": "camiseta muito bom, de ótima qualidade, e um preço acessível.",
-           "categoria": "camiseta",
+           "categoria": "Camisa",
            "vendidos" : 12
         }
     ]

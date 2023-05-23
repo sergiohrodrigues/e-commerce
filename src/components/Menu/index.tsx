@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { MdOutlineFavoriteBorder } from 'react-icons/md'
-import { BsHandbag } from 'react-icons/bs'
+import { BsCart2 } from 'react-icons/bs'
 import { styled } from 'styled-components'
 import { AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai'
 import ModalMenu from './ModalMenu'
@@ -143,11 +143,15 @@ export default function Menu({setGeneroEProduto}: Props) {
         <div className='input'>
           <input type="text" placeholder='O que voce procura hoje?'/>< AiOutlineSearch className='search'/>
         </div>
-        <div>
-          <MdOutlineFavoriteBorder size={25}/>
-          <span>Lista de Desejos</span>
-        </div>
-        <BsHandbag size={25}/>
+          <Link to='lista-de-desejos'>
+            <div>
+              <MdOutlineFavoriteBorder size={25}/>
+                <span>Lista de Desejos</span>
+            </div>
+          </Link>
+          <Link to='carrinho'>
+            <BsCart2 size={25}/>
+          </Link>
       </Section1>
 
       <Section2>
