@@ -11,7 +11,7 @@ const ConteudoContainer = styled.main`
   padding: 3rem 0;
 
   @media screen and (min-width: 1024px){
-    margin-top: 0;
+    margin: 0 auto 2rem 0;
     padding: 0;
   }
   `

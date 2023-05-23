@@ -3,6 +3,7 @@ import { MdFavoriteBorder, MdOutlineFavorite } from 'react-icons/md'
 import { Item } from "../../utilidade/Item"
 import { useEffect, useState, useContext } from "react"
 import { ListaDeDesejosContext, ListaDeDesejosDispatchContext } from '../../context/ListaDeDesejos'
+// import { CarrinhoContext, CarrinhoDispatchContext } from "../../context/Carrinho"
 
 const ItemContainer = styled.div`
     width: 90%;
@@ -73,18 +74,19 @@ const Descricao = styled.div`
 
 interface Props {
     item: Item,
-    iconFavorite: boolean,
-    setIconFavorite: React.Dispatch<React.SetStateAction<boolean>>,
-    listaDeDesejos: Item[],
-    setListaDeDesejos: React.Dispatch<React.SetStateAction<Item[]>>
+    carrinho: Item[],
+    setCarrinho: React.Dispatch<React.SetStateAction<Item[]>>
 }
 
-export default function CardProduto({item, iconFavorite, setIconFavorite, listaDeDesejos}: Props){
+export default function CardProduto({item, carrinho, setCarrinho}: Props){
 
     const [isFavorite, setIsFavorite] = useState(false)
 
     const listaDeDesejosContext = useContext(ListaDeDesejosContext)
     const setListaDeDesejosContext = useContext(ListaDeDesejosDispatchContext)
+
+    // const carrinhoContext = useContext(CarrinhoContext)
+    // const setCarrinhoContext = useContext(CarrinhoDispatchContext)
     
     useEffect(() => {
         if(!listaDeDesejosContext?.length){
@@ -112,8 +114,19 @@ export default function CardProduto({item, iconFavorite, setIconFavorite, listaD
         }
         const newList = listaDeDesejosContext.filter(itemLista => itemLista.id !== item.id)
         setListaDeDesejosContext(newList)
-        
     }
+
+    function adicionarNoCarrinho(item: Item){
+        // setCarrinhoContext([...carrinhoContext, item])
+        // console.log(carrinhoContext)
+        const itemJaExistente = carrinho.some(itemLista => itemLista.id === item.id)
+        if(!itemJaExistente){
+            setCarrinho([...carrinho, item])
+        } else {
+            alert('Item já adicionado a sua lista')
+        }
+    }
+
 
     return(
         <ItemContainer>
@@ -125,7 +138,7 @@ export default function CardProduto({item, iconFavorite, setIconFavorite, listaD
                 <h2>{item.titulo}</h2>
                 <p>{item.descricao}</p>
                 <span>Valor: {item.preco},00</span>
-                <button>Adicionar ao carrinho</button>
+                <button onClick={() => adicionarNoCarrinho(item)}>Adicionar ao carrinho</button>
             </Descricao>
         </ItemContainer>
     )

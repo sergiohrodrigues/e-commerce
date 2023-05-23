@@ -5,6 +5,8 @@ import { styled } from 'styled-components'
 import { AiOutlineMenu, AiOutlineSearch } from 'react-icons/ai'
 import ModalMenu from './ModalMenu'
 import { Link } from 'react-router-dom'
+import { Badge } from '@mui/material'
+import { Item } from '../../utilidade/Item'
 
 const MenuContainer = styled.header`
   position: relative;
@@ -128,10 +130,11 @@ interface Props {
   setGeneroEProduto: React.Dispatch<React.SetStateAction<{
     genero: string;
     produto: string;
-  }>>
+  }>>,
+  carrinho: Item[]
 }
 
-export default function Menu({setGeneroEProduto}: Props) {
+export default function Menu({setGeneroEProduto, carrinho}: Props) {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
@@ -150,7 +153,12 @@ export default function Menu({setGeneroEProduto}: Props) {
             </div>
           </Link>
           <Link to='carrinho'>
-            <BsCart2 size={25}/>
+            <Badge
+              badgeContent={carrinho.length}
+              color="primary"
+            >
+              <BsCart2 size='1.5rem'/>
+            </Badge>
           </Link>
       </Section1>
 

@@ -5,9 +5,9 @@ import Footer from "./components/Footer";
 import Inicio from "./components/Inicio";
 import Produtos from "./components/Produtos";
 import Produto from "./components/Produto";
-import { Item } from "./utilidade/Item";
 import PaginaListaDeDesejos from "./pages/PaginaListaDeDesejos";
 import PaginaCarrinho from "./pages/PaginaCarrinho";
+import { Item } from "./utilidade/Item";
 
 function RoutesAPP() {
 
@@ -16,18 +16,17 @@ function RoutesAPP() {
     produto: ''
   })
 
-  const [iconFavorite, setIconFavorite] = useState(false)
-  const [listaDeDesejos, setListaDeDesejos] = useState<Item[]>([])
+  const [carrinho, setCarrinho] = useState<Item[]>([])
 
   return (
     <Router>
-        <Menu setGeneroEProduto={setGeneroEProduto}/>
+        <Menu setGeneroEProduto={setGeneroEProduto} carrinho={carrinho}/>
         <Routes>
             <Route path="/" element={<Inicio />}/>
             <Route path="produtos" element={<Produtos generoEProduto={generoEProduto} setGeneroEProduto={setGeneroEProduto}/>}/>
-            <Route path="produto/:id" element={<Produto iconFavorite={iconFavorite} setIconFavorite={setIconFavorite} listaDeDesejos={listaDeDesejos} setListaDeDesejos={setListaDeDesejos}/>}/>
-            <Route path="lista-de-desejos" element={<PaginaListaDeDesejos listaDeDesejos={listaDeDesejos} setListaDeDesejos={setListaDeDesejos}/>}/>
-            <Route path="carrinho" element={<PaginaCarrinho />}/>
+            <Route path="produto/:id" element={<Produto carrinho={carrinho} setCarrinho={setCarrinho}/>}/>
+            <Route path="lista-de-desejos" element={<PaginaListaDeDesejos carrinho={carrinho} setCarrinho={setCarrinho}/>}/>
+            <Route path="carrinho" element={<PaginaCarrinho carrinho={carrinho} setCarrinho={setCarrinho}/>}/>
         </Routes>
         <Footer />
     </Router>

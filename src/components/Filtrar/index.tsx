@@ -117,10 +117,10 @@ export default function Filtrar({listaGenero, listaProduto, setFiltroGenero, set
                     {listaGenero.map((item, index) => (
                         <div key={index}>
                             <input 
-                                type="checkbox" 
-                                name={item} 
+                                type="radio" 
+                                name='genero'
                                 value={item} 
-                                onChange={(event) => setFiltroGenero(event.target.name)}
+                                onChange={(event) => setFiltroGenero(event.target.value)}
                             />
                             <label htmlFor={item}>{item}</label>
                         </div>
@@ -131,10 +131,10 @@ export default function Filtrar({listaGenero, listaProduto, setFiltroGenero, set
                     {listaProduto.map((item, index) => (
                         <div key={index}>
                             <input 
-                                type="checkbox" 
-                                name={item} 
+                                type="radio" 
+                                name='produto'
                                 value={item} 
-                                onChange={(event) => setFiltroProduto(event.target.name)}
+                                onChange={(event) => setFiltroProduto(event.target.value)}
                             />
                             <label htmlFor={item}>{item}</label>
                         </div>

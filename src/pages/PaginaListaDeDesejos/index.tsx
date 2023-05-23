@@ -41,7 +41,7 @@ const ContainerListaDeDesejos = styled.section`
         margin: 2rem auto 0 auto;
         flex-direction: row;
         align-items: flex-start;
-        min-height: 80vh;
+        min-height: 77vh;
         h2{
             width: 100%;
         }
@@ -51,18 +51,28 @@ const ContainerListaDeDesejos = styled.section`
     }
 
 `
+
 interface Props {
-    listaDeDesejos: Item[],
-    setListaDeDesejos: React.Dispatch<React.SetStateAction<Item[]>>
+    carrinho: Item[],
+    setCarrinho: React.Dispatch<React.SetStateAction<Item[]>>
 }
 
-export default function PaginaListaDeDesejos({listaDeDesejos, setListaDeDesejos}: Props){
+export default function PaginaListaDeDesejos({carrinho, setCarrinho}: Props){
     const listaDeDesejosContext = useContext(ListaDeDesejosContext)
     const setListaDeDesejosContext = useContext(ListaDeDesejosDispatchContext)
 
     function removerItemDaLista(item: Item){
         const itemRemovido = listaDeDesejosContext.filter(it => it.id !== item.id)
         setListaDeDesejosContext(itemRemovido)
+    }
+
+    function adicionarNoCarrinho(item: Item){
+        const itemJaExistente = carrinho.some(itemLista => itemLista.id === item.id)
+        if(!itemJaExistente){
+            setCarrinho([...carrinho, item])
+        } else {
+            alert('Item já adicionado a sua lista')
+        }
     }
 
     return(
@@ -73,7 +83,7 @@ export default function PaginaListaDeDesejos({listaDeDesejos, setListaDeDesejos}
                 <div key={index}>
                     <img src={`/imagens/imagem${item.id}.png`} alt="" />
                     <MdOutlineFavorite className="favorite" onClick={() => removerItemDaLista(item)}/>
-                    <button>Adicionar ao Carrinho</button>
+                    <button onClick={() => adicionarNoCarrinho(item)}>Adicionar ao Carrinho</button>
                 </div>
             ))
         }

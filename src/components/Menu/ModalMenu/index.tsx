@@ -10,7 +10,7 @@ const ModalContainer = styled.section<{display: string}>`
     display: ${props => props.display};
     @media screen and (min-width: 1024px){
         width: 80%;
-        height: 60vh;
+        height: 45vh;
         background-color: gray;
         display: ${props => props.display};
         position: absolute;
