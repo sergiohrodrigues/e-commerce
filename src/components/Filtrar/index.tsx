@@ -95,13 +95,13 @@ export default function Filtrar({listaGenero, listaProduto, setFiltroGenero, set
             genero: filtroGenero,
             produto: filtroProduto
         })
-        limparFiltros()
+        // limparFiltros()
     }
 
-    function limparFiltros(){
-        setFiltroGenero('')
-        setFiltroProduto('')
-    }
+    // function limparFiltros(){
+    //     setFiltroGenero('')
+    //     setFiltroProduto('')
+    // }
 
     interface PropsInput{
         event: React.MouseEvent<HTMLInputElement, MouseEvent>
